@@ -1,5 +1,6 @@
 ﻿using System;
 using ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves.Entities;
+using ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves.Entities.Enums;
 
 namespace ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves
 {
