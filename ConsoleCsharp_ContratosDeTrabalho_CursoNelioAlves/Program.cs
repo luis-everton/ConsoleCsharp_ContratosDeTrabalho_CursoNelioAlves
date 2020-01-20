@@ -1,4 +1,5 @@
 ﻿using System;
+using ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves.Entities;
 
 namespace ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves
 {
