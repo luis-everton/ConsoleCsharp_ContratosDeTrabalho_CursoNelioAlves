@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves.Entities
 {
@@ -22,6 +20,12 @@ namespace ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves.Entities
             Date = date;
             ValuePerHour = valuePerHour;
             Hours = hours;
+        }
+
+        //método que calcula o valor total do contrato
+        public double TotalValue()
+        {
+            return Hours * ValuePerHour;
         }
     }
 }
