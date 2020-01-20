@@ -9,6 +9,7 @@ namespace ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves
     {
         static void Main(string[] args)
         {
+            // fazendo a leitura e apresentação dos dados conforme enunciado do problema
             Console.Write("Enter department's name: ");
             string deptName = Console.ReadLine();
 
@@ -16,16 +17,16 @@ namespace ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves
             Console.Write("Name: ");
             string name = Console.ReadLine();
             Console.Write("Level (Junior/MidLevel/Senior): ");
-            WorkerLevel level = Enum.Parse<WorkerLevel>(Console.ReadLine());
+            WorkerLevel level = Enum.Parse<WorkerLevel>(Console.ReadLine());        //leitura do enum
             Console.Write("Base salary: ");
             double baseSalary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            Department dept = new Department(deptName);
-            Worker worker = new Worker(name, level, baseSalary, dept);
+            Department dept = new Department(deptName); // instanciando um departamento
+            Worker worker = new Worker(name, level, baseSalary, dept);  //instanciando um trabalhador
 
-            Console.Write("How many contracts to this worker? ");
+            Console.Write("How many contracts to this worker? ");   //obtendo a quantidade de contratos de trabalho 
             int n = int.Parse(Console.ReadLine());
-            for (int i = 1; i <= n; i++)
+            for (int i = 1; i <= n; i++)    //cada ciclo do for corresponde a um contrato até o limite n
             {
                 Console.WriteLine($"Enter #{i} contract data:");
                 Console.Write("Date (DD/MM/YYYY): ");
@@ -36,11 +37,11 @@ namespace ConsoleCsharp_ContratosDeTrabalho_CursoNelioAlves
                 int hours = int.Parse(Console.ReadLine());
 
                 HourContract contract = new HourContract(date, valuePerHour, hours);
-                worker.AddContract(contract);
+                worker.AddContract(contract);   // adicionando o novo contrato ao trabalhador
             }
 
             Console.WriteLine();
-            Console.Write("Enter month and year to calculate income (MM/YYYY): ");
+            Console.Write("Enter month and year to calculate income (MM/YYYY): "); // obtendo o mes e ano que se deseja ver o faturamento
             string monthAndYear = Console.ReadLine();
             int month = int.Parse(monthAndYear.Substring(0, 2));
             int year = int.Parse(monthAndYear.Substring(3));
